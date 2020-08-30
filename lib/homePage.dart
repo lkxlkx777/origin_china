@@ -90,7 +90,6 @@ class _HomePagerState extends State<HomePager> {
 //      ));
 //    }
   pages.add(NewsPage());
-  
   pages.add(TweetPage());
   pages.add(FindPage());
   pages.add(MyPage());
