@@ -94,15 +94,12 @@ class _WebLoginPageState extends State<WebLoginPage> {
           if(value!=null && value.length>0){
             Map<String,dynamic> decode = json.decode(value);
             if(map!=null && map.isNotEmpty){
-              UserInfoUtil.saveUserInfo(decode);
+              UserInfoUtil.saveLoginInfo(decode);
               Navigator.pop(context,"refresh");
             }
           }
         });
       }
-
-
-
     });
   }
 

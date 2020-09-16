@@ -28,14 +28,6 @@ class _HomePagerState extends State<HomePager> {
     'assets/images/ic_nav_my_pressed.png'
   ];
 
-  List<IconData> drawerIcons = [
-    Icons.send,
-    Icons.home,
-    Icons.error,
-    Icons.settings
-  ];
-  List<String> drawerTiles = ['发布动弹', '动弹小黑屋', '关于', '设置'];
-
   int currentIndex = 0;
   PageController _pageController;
 
@@ -50,11 +42,11 @@ class _HomePagerState extends State<HomePager> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(titles[currentIndex]),
-        centerTitle: true,
-        backgroundColor: Color(AppColors.APP_THEME),
-      ),
+//      appBar: AppBar(
+//        title: Text(titles[currentIndex]),
+//        centerTitle: true,
+//        backgroundColor: Color(AppColors.APP_THEME),
+//      ),
       body: PageView.builder(
         itemCount: titles.length,
         onPageChanged: (index) {
@@ -74,11 +66,6 @@ class _HomePagerState extends State<HomePager> {
           setState(() {});
         },
         type: BottomNavigationBarType.fixed,
-      ),
-      drawer: LkxDrawer(
-        headImgPath:'assets/images/cover_img.jpg',
-        menuIcons: drawerIcons,
-        menuTitles: drawerTiles,
       ),
     );
   }
